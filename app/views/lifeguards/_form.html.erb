@@ -1,0 +1,25 @@
+<%= form_for(@lifeguard) do |f| %>
+  <% if @lifeguard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lifeguard.errors.count, "error") %> prohibited this lifeguard from being saved:</h2>
+
+      <ul>
+      <% @lifeguard.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tan %><br>
+    <%= f.check_box :tan %>
+  </div>
+  <div class="field">
+    <%= f.label :spf %><br>
+    <%= f.number_field :spf %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

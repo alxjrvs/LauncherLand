@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tan: 
+  spf: 1
+
+two:
+  tan: 
+  spf: 1

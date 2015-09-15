@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Lifeguards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tan</th>
+      <th>Spf</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lifeguards.each do |lifeguard| %>
+      <tr>
+        <td><%= lifeguard.tan %></td>
+        <td><%= lifeguard.spf %></td>
+        <td><%= link_to 'Show', lifeguard %></td>
+        <td><%= link_to 'Edit', edit_lifeguard_path(lifeguard) %></td>
+        <td><%= link_to 'Destroy', lifeguard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lifeguard', new_lifeguard_path %>
